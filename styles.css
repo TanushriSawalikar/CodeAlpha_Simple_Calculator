@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    width: 320px;
+    background-color: #2d3436;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.display {
+    padding: 20px;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.previous-operand {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    min-height: 24px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.current-operand {
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #636e72;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #b2bec3;
+    color: #2d3436;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.number {
+    background-color: #636e72;
+}
+
+.operator {
+    background-color: #fdcb6e;
+    color: #2d3436;
+}
+
+.operator:hover {
+    background-color: #ffeaa7;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+#equals {
+    background-color: #00b894;
+}
+
+#equals:hover {
+    background-color: #55efc4;
+}
+
+#clear {
+    background-color: #d63031;
+}
+
+#clear:hover {
+    background-color: #ff7675;
+}
+
+#delete {
+    background-color: #6c5ce7;
+}
+
+#delete:hover {
+    background-color: #a29bfe;
+}
+
+/* Keyboard focus styling */
+button:focus {
+    outline: 2px solid #74b9ff;
+    outline-offset: -2px;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    button {
+        padding: 15px;
+    }
+}
